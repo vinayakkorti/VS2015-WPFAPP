@@ -9,20 +9,8 @@ trigger:
 pool:
   'Default'
 
-variables:
-  solution: '/*.sln'
-  buildPlatform: 'Any CPU'
-  buildConfiguration: 'Release'
-
-steps:
-- task: NuGetToolInstaller@1
-
-- task: NuGetCommand@2
-  inputs:
-    restoreSolution: '$(solution)'
-
 - task: BuildInstaller@1
   inputs:
     installTaskMode: 'solution'
-    SlnPath: '**/*.sln'
+    SlnPath: './VS2015-WPF-APP.sln'
     VsVersion: 'VS2015'
