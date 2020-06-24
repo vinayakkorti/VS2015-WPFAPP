@@ -1,1 +1,14 @@
 C:\Users\Vinayak\documents\visual studio 2015\Projects\VS2015-WPF-APP\VS2015-WPF-APP\bin\Release\VS2015-WPF-APP.exe.config
+C:\Users\Vinayak\documents\visual studio 2015\Projects\VS2015-WPF-APP\VS2015-WPF-APP\bin\Release\VS2015-WPF-APP.exe
+C:\Users\Vinayak\documents\visual studio 2015\Projects\VS2015-WPF-APP\VS2015-WPF-APP\bin\Release\VS2015-WPF-APP.pdb
+C:\Users\Vinayak\documents\visual studio 2015\Projects\VS2015-WPF-APP\VS2015-WPF-APP\obj\Release\VS2015-WPF-APP.csprojResolveAssemblyReference.cache
+C:\Users\Vinayak\documents\visual studio 2015\Projects\VS2015-WPF-APP\VS2015-WPF-APP\obj\Release\MainWindow.g.cs
+C:\Users\Vinayak\documents\visual studio 2015\Projects\VS2015-WPF-APP\VS2015-WPF-APP\obj\Release\App.g.cs
+C:\Users\Vinayak\documents\visual studio 2015\Projects\VS2015-WPF-APP\VS2015-WPF-APP\obj\Release\VS2015-WPF-APP_MarkupCompile.cache
+C:\Users\Vinayak\documents\visual studio 2015\Projects\VS2015-WPF-APP\VS2015-WPF-APP\obj\Release\VS2015-WPF-APP_MarkupCompile.lref
+C:\Users\Vinayak\documents\visual studio 2015\Projects\VS2015-WPF-APP\VS2015-WPF-APP\obj\Release\MainWindow.baml
+C:\Users\Vinayak\documents\visual studio 2015\Projects\VS2015-WPF-APP\VS2015-WPF-APP\obj\Release\VS2015-WPF-APP.g.resources
+C:\Users\Vinayak\documents\visual studio 2015\Projects\VS2015-WPF-APP\VS2015-WPF-APP\obj\Release\VS2015_WPF_APP.Properties.Resources.resources
+C:\Users\Vinayak\documents\visual studio 2015\Projects\VS2015-WPF-APP\VS2015-WPF-APP\obj\Release\VS2015-WPF-APP.csproj.GenerateResource.Cache
+C:\Users\Vinayak\documents\visual studio 2015\Projects\VS2015-WPF-APP\VS2015-WPF-APP\obj\Release\VS2015-WPF-APP.exe
+C:\Users\Vinayak\documents\visual studio 2015\Projects\VS2015-WPF-APP\VS2015-WPF-APP\obj\Release\VS2015-WPF-APP.pdb
