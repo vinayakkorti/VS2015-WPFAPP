@@ -24,6 +24,6 @@ steps:
 - task: BuildInstaller@1
   inputs:
     installTaskMode: 'vdproj'
-    SlnPath: '*.sln'
-    VdprojPath: '*.vdproj'
+    SlnPath: 'VS2015-WPF-APP.sln'
+    VdprojPath: 'Setup1.vdproj'
     VsVersion: 'VS2015'
