@@ -12,5 +12,5 @@ pool:
 - task: BuildInstaller@1
   inputs:
     installTaskMode: 'solution'
-    SlnPath: '*\*.sln'
+    SlnPath: '*/*.sln'
     VsVersion: 'VS2015'
