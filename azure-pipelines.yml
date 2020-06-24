@@ -10,26 +10,25 @@ pool:
   'Default'
 
 variables:
-  DOTNET_SKIP_FIRST_TIME_EXPERIENCE: true
+  solution: '**/*.sln'
+  buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
 
 steps:
-- task: UseDotNet@2
-  inputs:
-    packageType: 'sdk'
-    version: '3.0.x'
+- task: NuGetToolInstaller@1
 
-- task: DotNetCoreCLI@2
+- task: NuGetCommand@2
   inputs:
-    command: 'publish'
-    publishWebProjects: false
-    zipAfterPublish: false
-    modifyOutputPath: false
-    arguments: --output $(Build.ArtifactStagingDirectory)
+    restoreSolution: '$(solution)'
 
-- task: PublishPipelineArtifact@1
+- task: VSBuild@1
   inputs:
-    targetPath: '$(Build.ArtifactStagingDirectory)'
-    artifact: 'VS-APP'
+    solution: '$(solution)'
+    platform: '$(buildPlatform)'
+    configuration: '$(buildConfiguration)'
 
+- task: VSTest@2
+  inputs:
+    platform: '$(buildPlatform)'
+    configuration: '$(buildConfiguration)'
 
