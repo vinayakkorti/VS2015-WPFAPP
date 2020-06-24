@@ -9,8 +9,21 @@ trigger:
 pool:
   'Default'
 
+variables:
+  solution: '**/*.sln'
+  buildPlatform: 'Any CPU'
+  buildConfiguration: 'Debug'
+
+steps:
+- task: NuGetToolInstaller@1
+
+- task: NuGetCommand@2
+  inputs:
+    restoreSolution: '$(solution)'
+
 - task: BuildInstaller@1
   inputs:
-    installTaskMode: 'solution'
+    installTaskMode: 'vdproj'
     SlnPath: '*/*.sln'
+    VdprojPath: '*/*.vdproj'
     VsVersion: 'VS2015'
