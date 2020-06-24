@@ -7,7 +7,7 @@ trigger:
 - master
 
 pool:
-  'MylocalHost1'
+  'Default'
 
 variables:
   solution: '**/*.sln'
