@@ -24,6 +24,6 @@ steps:
 - task: BuildInstaller@1
   inputs:
     installTaskMode: 'vdproj'
-    SlnPath: '*/*.sln'
-    VdprojPath: '*/*.vdproj'
+    SlnPath: '*.sln'
+    VdprojPath: '*.vdproj'
     VsVersion: 'VS2015'
