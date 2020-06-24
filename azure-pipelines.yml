@@ -21,8 +21,8 @@ steps:
   inputs:
     restoreSolution: '$(solution)'
 
-- task: VSBuild@1
+- task: BuildInstaller@1
   inputs:
-    solution: '**\*.sln'
-    vsVersion: '15.0'
-    msbuildArchitecture: 'x64'
+    installTaskMode: 'solution'
+    SlnPath: '**/*.sln'
+    VsVersion: 'VS2015'
