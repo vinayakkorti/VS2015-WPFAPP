@@ -21,13 +21,8 @@ steps:
   inputs:
     restoreSolution: '$(solution)'
 
-- task: VSBuild@1
+- task: BuildInstaller@1
   inputs:
-    solution: '$(solution)'
-    platform: '$(buildPlatform)'
-    configuration: '$(buildConfiguration)'
-
-- task: VSTest@2
-  inputs:
-    platform: '$(buildPlatform)'
-    configuration: '$(buildConfiguration)'
+    installTaskMode: 'solution'
+    SlnPath: 'VS2015-WPF-APP.sln'
+    VsVersion: 'VS2015'
