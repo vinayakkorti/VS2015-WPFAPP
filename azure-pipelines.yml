@@ -33,5 +33,5 @@ steps:
     regionName: 'us-east-1'
     bucketName: 'msi-app'
     sourceFolder: '$(Build.ArtifactStagingDirectory)'
-    globExpressions: 'Setup1.msi-$Build.BuildNumber'
+    globExpressions: 'Setup1.msi-$(Build.BuildNumber)'
     targetFolder: 'myapp'
