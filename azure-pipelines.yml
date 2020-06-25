@@ -32,6 +32,6 @@ steps:
     awsCredentials: 'My AWS connection'
     regionName: 'us-east-1'
     bucketName: 'msi-app'
-    sourceFolder: '$(Build.ArtifactStagingDirectory)/Setup1.msi'
+    sourceFolder: '$(Build.ArtifactStagingDirectory)'
     globExpressions: '**'
     targetFolder: 'myapp'
