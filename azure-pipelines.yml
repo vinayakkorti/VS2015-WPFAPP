@@ -27,8 +27,11 @@ steps:
     SlnPath: 'VS2015-WPF-APP.sln'
     VsVersion: 'VS2015'
 
-- task: S3Upload@0
+- task: S3Upload@1
   inputs:
-    BucketName: 'msi-app'
-    File: '$(Build.ArtifactStagingDirectory)/Setup1.msi'
-    Key: 'Setup1.msi'
+    awsCredentials: 'My AWS connection'
+    regionName: 'us-east-1'
+    bucketName: 'msi-app'
+    sourceFolder: '$(Build.ArtifactStagingDirectory)/Setup1.msi'
+    globExpressions: '**'
+    targetFolder: 'myapp'
