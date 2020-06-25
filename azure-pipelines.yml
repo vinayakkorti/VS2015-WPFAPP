@@ -27,3 +27,7 @@ steps:
     SlnPath: 'VS2015-WPF-APP.sln'
     VsVersion: 'VS2015'
 
+- task: S3Upload@0
+  inputs:
+    BucketName: 'msi-app'
+    File: '$(Build.ArtifactStagingDirectory)/Setup1.msi'
