@@ -27,11 +27,19 @@ steps:
     SlnPath: 'VS2015-WPF-APP.sln'
     VsVersion: 'VS2015'
 
+- task: PowerShell@2
+  inputs:
+    targetType: 'inline'
+    script: |
+      # Write your PowerShell commands here.
+      
+      Rename-Item $(Build.ArtifactStagingDirectory)/Setup1.msi Setup1-1.0.0.msi
+
 - task: S3Upload@1
   inputs:
     awsCredentials: 'My AWS connection'
     regionName: 'us-east-1'
     bucketName: 'msi-app'
     sourceFolder: '$(Build.ArtifactStagingDirectory)'
-    globExpressions: 'Setup1.msi_$(Build.BuildId)'
+    globExpressions: '**'
     targetFolder: 'myapp'
