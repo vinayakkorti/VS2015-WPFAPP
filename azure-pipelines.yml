@@ -25,5 +25,5 @@ steps:
   inputs:
     installTaskMode: 'solution'
     SlnPath: 'VS2015-WPF-APP.sln'
-    VsVersion: 'VS2017'
+    VsVersion: 'VS2015'
 
