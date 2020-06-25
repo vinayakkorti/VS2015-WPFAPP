@@ -31,3 +31,4 @@ steps:
   inputs:
     BucketName: 'msi-app'
     File: '$(Build.ArtifactStagingDirectory)/Setup1.msi'
+    Key: 'Setup1.msi'
