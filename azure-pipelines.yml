@@ -7,7 +7,7 @@ trigger:
 - master
 
 pool:
-  'Default'
+  vmImage: 'vs2017-win2016'
 
 variables:
   solution: '**/*.sln'
@@ -25,9 +25,5 @@ steps:
   inputs:
     installTaskMode: 'solution'
     SlnPath: 'VS2015-WPF-APP.sln'
-    VsVersion: 'VS2015'
+    VsVersion: 'VS2017'
 
-- task: S3Upload@0
-  inputs:
-    BucketName: 'msi-app'
-    File: '$(Build.ArtifactStagingDirectory)/Setup1.msi'
