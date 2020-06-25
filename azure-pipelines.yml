@@ -33,7 +33,7 @@ steps:
     script: |
       # Write your PowerShell commands here.
       
-      Rename-Item $(Build.ArtifactStagingDirectory)/Setup1.msi Setup1-1.0.0.msi
+      Rename-Item $(Build.ArtifactStagingDirectory)/Setup1.msi Setup1-1.0.$(Build.BuildId).0.msi
 
 - task: S3Upload@1
   inputs:
