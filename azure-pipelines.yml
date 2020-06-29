@@ -44,11 +44,8 @@ steps:
     globExpressions: '**'
     targetFolder: 'myapp'
 
-- task: UniversalPackages@0
+- task: PublishPipelineArtifact@1
   inputs:
-    command: 'publish'
-    publishDirectory: '$(Build.ArtifactStagingDirectory)'
-    feedsToUsePublish: 'internal'
-    vstsFeedPublish: '7d3f8166-469c-4e60-8c66-20ffd4910644/0f18236b-78b0-47a5-b044-610ff1b410c8'
-    vstsFeedPackagePublish: 'MyAPP-1.0'
-    versionOption: 'patch'
+    targetPath: '$(Pipeline.Workspace)'
+    artifact: 'drop'
+    publishLocation: 'pipeline'
