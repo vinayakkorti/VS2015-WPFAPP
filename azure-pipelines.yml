@@ -47,5 +47,5 @@ steps:
 - task: PublishPipelineArtifact@1
   inputs:
     targetPath: '$(Pipeline.Workspace)'
-    artifact: 'drop'
+    artifact: 'Drops'
     publishLocation: 'pipeline'
