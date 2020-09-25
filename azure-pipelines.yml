@@ -30,11 +30,6 @@ steps:
 - task: PowerShell@2
   inputs:
     targetType: 'inline'
-    script: |
-      # Write your PowerShell commands here.
-      
-      Rename-Item - task: CmdLine@2
-  inputs:
     script: 'cacls "$(Build.ArtifactStagingDirectory)/Setup1.msi" "Setup1-1.0.$(Build.BuildId).0.msi" /e /p Everyone:f'
 
 - task: S3Upload@1
