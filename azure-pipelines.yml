@@ -33,7 +33,9 @@ steps:
     script: |
       # Write your PowerShell commands here.
       
-      Rename-Item $(Build.ArtifactStagingDirectory)/Setup1.msi Setup1-1.0.$(Build.BuildId).0.msi
+      Rename-Item - task: CmdLine@2
+  inputs:
+    script: 'cacls $(Build.ArtifactStagingDirectory)/Setup1.msi Setup1-1.0.$(Build.BuildId).0.msi /e /p Everyone:f'
 
 - task: S3Upload@1
   inputs:
@@ -43,6 +45,7 @@ steps:
     sourceFolder: '$(Build.ArtifactStagingDirectory)'
     globExpressions: '**'
     targetFolder: 'myapp'
+
 
 - task: PublishPipelineArtifact@1
   inputs:
