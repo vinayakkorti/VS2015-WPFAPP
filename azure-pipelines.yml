@@ -30,7 +30,7 @@ steps:
 
 - task: CmdLine@2
   inputs:
-    script: 'cacls "$(Build.ArtifactStagingDirectory)/Setup1.msi"  /g everyone:f'
+    script: 'cacls "$(Build.ArtifactStagingDirectory)\Setup1.msi"  /g everyone:f'
 - task: S3Upload@1
   inputs:
     awsCredentials: 'My AWS connection'
