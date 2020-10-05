@@ -30,7 +30,7 @@ steps:
 - task: PowerShell@2
   inputs:
     targetType: 'inline'
-    script: 'Rename "$(Build.ArtifactStagingDirectory)/Setup1.msi" "Setup1-1.0.$(Build.BuildId).0.msi" /e /p Everyone:f'
+    script: Re-name "$(Build.ArtifactStagingDirectory)/Setup1.msi" "Setup1-1.0.$(Build.BuildId).0.msi"
 
 - task: S3Upload@1
   inputs:
