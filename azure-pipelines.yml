@@ -28,9 +28,6 @@ steps:
     VsVersion: 'VS2015'
 
 
-- task: CmdLine@2
-  inputs:
-    script: ICACLS "$(Build.ArtifactStagingDirectory)\Setup1.msi" /grant Everyone:F
 - task: S3Upload@1
   inputs:
     awsCredentials: 'My AWS connection'
