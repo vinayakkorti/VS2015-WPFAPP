@@ -36,11 +36,11 @@ steps:
 - task: PowerShell@2
   inputs:
     targetType: 'inline'
-       script: |
-            $WshShell = New-Object -comObject WScript.Shelly
-            $Shortcut = $WshShell.CreateShortcut("msi.lnk")
-            $Shortcut.TargetPath = ("mydir/Setup1-2.1.$versionnumber.0.msi")
-            $Shortcut.Save()
+      script: |
+        $WshShell = New-Object -comObject WScript.Shelly
+        $Shortcut = $WshShell.CreateShortcut("msi.lnk")
+        $Shortcut.TargetPath = ("mydir/Setup1-2.1.$versionnumber.0.msi")
+        $Shortcut.Save()
     
 
 - task: S3Upload@1
