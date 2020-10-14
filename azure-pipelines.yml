@@ -26,22 +26,7 @@ steps:
     installTaskMode: 'solution'
     SlnPath: 'VS2015-WPF-APP.sln'
     VsVersion: 'VS2015'
-
-- task: CmdLine@2
-  inputs:
-    script: |
-      ICACLS "$(Agent.BuildDirectory)\a\Setup1.msi" /grant Everyone:F
-      ICACLS "$(Agent.BuildDirectory)\s\*.txt" /grant Everyone:F
-
-- task: PowerShell@2
-  inputs:
-    targetType: 'inline'
-    script: |
-        $WshShell = New-Object -comObject WScript.Shelly
-        $Shortcut = $WshShell.CreateShortcut("msi.lnk")
-        $Shortcut.TargetPath = ("mydir/Setup1-2.1.$versionnumber.0.msi")
-        $Shortcut.Save()
-    
+ 
 
 - task: S3Upload@1
   inputs:
