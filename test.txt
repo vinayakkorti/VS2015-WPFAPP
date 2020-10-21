@@ -1,2 +1,2 @@
 to test the the automated commit trigers the build
-added 2nd line
+added 2nd line -
